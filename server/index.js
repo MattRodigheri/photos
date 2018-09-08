@@ -11,7 +11,6 @@ app.get('/photos', function(req, res) {
     if(err) {
       res.sendStatus(503);
     } else {
-      console.log(data)
       res.send(data);
     }
   })
@@ -22,7 +21,7 @@ app.get('/photos', function(req, res) {
 //     if(err) {
 //       console.log(err)
 //     } else {
-//       console.log('posted!')
+//       console.log(data)
 //     }
 //   })
 // })

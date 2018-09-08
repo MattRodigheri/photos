@@ -1,4 +1,6 @@
 var mysql = require('mysql');
+const faker = require('faker');
+
 
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -20,12 +22,16 @@ var getPhotos = function(callback) {
 //   function getRandomInt(min, max) {
 //     return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
 //   }
-//   var id = 0;
-//   var random = 1;
-//   while (id < 50) {
-//     random = getRandomInt(1, 100);
+//   var id = 51;
+//   var randomFriends = 1;
+//   var randomReviews = 1;
+//   var randomName = '';
+//   while (id <= 1000) {
+//     randomFriends = getRandomInt(1, 1000);
+//     randomReviews = getRandomInt(1, 100);
+//     randomName = faker.name.findName();
 //     id++;
-//     connection.query(`UPDATE photos SET reviews = ${random} WHERE id = ${id}`, function (err, rows, fields) {
+//     connection.query(`UPDATE photos SET url = "https://loremflickr.com/meal" WHERE id > 50;`, function (err, rows, fields) {
 //       if (err) {
 //         callback(err);
 //       } else {
@@ -34,6 +40,6 @@ var getPhotos = function(callback) {
 //     });
 //   }
 // }
-//
-// module.exports.insertInfo = insertInfo;
+
+//module.exports.insertInfo = insertInfo;
 module.exports.getPhotos = getPhotos;
