@@ -1,6 +1,11 @@
 import React from 'react';
 import ArrowRight from './ArrowRight.jsx';
 
+
+var nextPhoto = function() {
+  console.log('next')
+}
+
 const PhotoRight = (props) => {
   return (
     <div>
