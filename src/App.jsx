@@ -29,7 +29,7 @@ class App extends React.Component {
       success: function(data) {
         var count = 0;
         while (count < 10) {
-          var randomFoodPic = getRandomInt(1, 50);
+          var randomFoodPic = getRandomInt(0, 49);
           tenImages.push(data[randomFoodPic].url)
           count++;
         }

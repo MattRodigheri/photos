@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica;
   font-weight: bold;
-  margin: 0;
+  margin: 50px;
 }
 
 .slideshow {
@@ -12,20 +12,40 @@ body {
   height: 250px;
   width: 250px;
   float: left;
+  transition: transform .2s;
+}
+
+.photo:hover {
+    transform: scale(1.2);
+}
+
+/* .photo-container {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.photo-container img {
+  width: 100%;
+} */
+
+.center-photo {
+  height: 300px;
+  width: 300px;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
 }
 
 .left-arrow {
-  position: absolute;
-  left: 10px;
-  top: 100px;
-  z-index: 1;
-  width: 50px;
+  left: 60px;
+  top: 150px;
 }
 
 .right-arrow {
-  position: absolute;
-  left: 690px;
-  top: 100px;
-  z-index: 1;
-  width: 50px;
+  left: 730px;
+  top: 150px;
 }

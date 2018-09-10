@@ -5,7 +5,7 @@ var previousPhoto = function() {
 }
 
 const ArrowLeft = (props) => {
-  return <img className='left-arrow' src='../left-arrow.png' onClick={previousPhoto} />
+  return <img className='arrow left-arrow' src='../left-arrow.png' onClick={previousPhoto} />
 }
 
 export default ArrowLeft;
