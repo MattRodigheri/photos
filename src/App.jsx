@@ -46,7 +46,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='slideshow'>
         <Photos images={this.state.images}/>
       </div>
     )

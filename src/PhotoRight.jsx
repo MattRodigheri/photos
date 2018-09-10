@@ -1,7 +1,13 @@
 import React from 'react';
+import ArrowRight from './ArrowRight.jsx';
 
 const PhotoRight = (props) => {
-  return <img images={props.images} src={`${props.images[2]}`} />
+  return (
+    <div>
+      <ArrowRight />
+      <img className='photo' images={props.images} src={`${props.images[2]}`} />
+    </div>
+  )
 }
 
 export default PhotoRight;

@@ -24,10 +24,7 @@ class Photos extends React.Component {
       <div>
         <PhotoLeft images={this.props.images} />
         <PhotoCenter images={this.props.images} />
-        <PhotoRight images={this.props.images} />
-
-        <ArrowLeft previousPhoto={this.previousPhoto}/>
-        <ArrowRight nextPhoto={this.nextPhoto}/>
+        <PhotoRight images={this.props.images} />        
       </div>
     )
   }

@@ -1,14 +1,31 @@
 body {
-  /* background-color: black; */
   font-family: Helvetica;
   font-weight: bold;
+  margin: 0;
 }
 
-img {
+.slideshow {
+  /* height: 250px; */
+}
+
+.photo {
   height: 250px;
   width: 250px;
+  float: left;
 }
 
-.arrow {
-  width: 25px;
+.left-arrow {
+  position: absolute;
+  left: 10px;
+  top: 100px;
+  z-index: 1;
+  width: 50px;
+}
+
+.right-arrow {
+  position: absolute;
+  left: 690px;
+  top: 100px;
+  z-index: 1;
+  width: 50px;
 }
