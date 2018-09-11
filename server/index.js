@@ -3,7 +3,7 @@ const app = express();
 const dbMethods = require('../database/index.js');
 const bodyParser = require('body-parser');
 
-app.use(express.static(__dirname + './public/'));
+app.use(express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/photos', function(req, res) {
