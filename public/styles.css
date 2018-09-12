@@ -15,23 +15,29 @@ body {
   transition: transform .2s;
 }
 
-.photo:hover {
-    transform: scale(1.2);
-}
-
-/* .photo-container {
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.photo-container img {
-  width: 100%;
-} */
-
 .center-photo {
   height: 300px;
   width: 300px;
+}
+
+/* .left-photo {
+
+}
+
+.right-photo {
+
+} */
+
+.left-photo:hover {
+  transform: scale(1.2);
+}
+
+/* .right-photo:hover {
+  transform: scale(1.2);
+} */
+
+.right-photo:hover + .center-photo {
+  transform: scale(.5);
 }
 
 .arrow {
