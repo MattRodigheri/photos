@@ -11,7 +11,8 @@ render() {
     return(
       <div>
         <ArrowRight nextPhoto={this.props.nextPhoto}/>
-        <img className='photo right-photo' images={this.props.images} src={`${this.props.images[2]}`} />
+        <img className='photo right-photo' info={this.props.info} src={`${this.props.info.images[2]}`} />
+        <p>{`Photo of RestaurantName in Location`}</p>
       </div>
     )
   }
