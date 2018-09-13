@@ -1,12 +1,22 @@
 import React from 'react';
 
+class ArrowRight extends React.Component {
+  constructor(props) {
+    super(props);
 
-var nextPhoto = function() {
-  console.log('next');
-}
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-const ArrowRight = (props) => {
-  return <img className='arrow right-arrow' src='../right-arrow.png' onClick={nextPhoto} />
+  handleClick() {
+    this.props.nextPhoto();
+  }
+
+
+  render() {
+    return(
+      <img className='arrow right-arrow' src='../right-arrow.png' onClick={this.handleClick} />
+    )
+  }
 }
 
 export default ArrowRight;

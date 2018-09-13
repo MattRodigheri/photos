@@ -1,13 +1,21 @@
 import React from 'react';
 import ArrowLeft from './ArrowLeft.jsx'
 
-const PhotoLeft = (props) => {
-  return (
-    <div>
-      <ArrowLeft />
-      <img className='photo' images={props.images} src={`${props.images[0]}`} />
-    </div>
-  )
+class PhotoLeft extends React.Component {
+  constructor(props) {
+    super(props)
+
+  }
+
+render() {
+    return(
+      <div>
+        <ArrowLeft previousPhoto={this.props.previousPhoto}/>
+        <img className='photo left-photo' images={this.props.images} src={`${this.props.images[0]}`} />
+        <p>{}</p>
+      </div>
+    )
+  }
 }
 
 export default PhotoLeft;

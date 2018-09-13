@@ -1,18 +1,21 @@
 import React from 'react';
 import ArrowRight from './ArrowRight.jsx';
 
+class PhotoRight extends React.Component {
+  constructor(props) {
+    super(props)
 
-var nextPhoto = function() {
-  console.log('next')
+  }
+
+render() {
+    return(
+      <div>
+        <ArrowRight nextPhoto={this.props.nextPhoto}/>
+        <img className='photo right-photo' images={this.props.images} src={`${this.props.images[2]}`} />
+      </div>
+    )
+  }
 }
 
-const PhotoRight = (props) => {
-  return (
-    <div>
-      <ArrowRight />
-      <img className='photo' images={props.images} src={`${props.images[2]}`} />
-    </div>
-  )
-}
 
 export default PhotoRight;
