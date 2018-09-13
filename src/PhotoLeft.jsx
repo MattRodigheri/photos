@@ -7,12 +7,12 @@ class PhotoLeft extends React.Component {
 
   }
 
-render() {
+  render() {
     return(
       <div>
         <ArrowLeft previousPhoto={this.props.previousPhoto}/>
-        <img className='photo left-photo' images={this.props.images} src={`${this.props.images[0]}`} />
-        <p>{}</p>
+        <img className='photo left-photo' images={this.props.images} src={`${this.props.info.images[0]}`} />
+        <p>{`Photo of RestaurantName in Location`}</p>
       </div>
     )
   }

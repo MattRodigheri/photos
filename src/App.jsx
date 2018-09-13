@@ -7,7 +7,10 @@ class App extends React.Component {
     super();
 
     this.state = {
-      images: []
+      images: [],
+      photographers: [],
+      friends: [],
+      reviews: []
     }
 
     this.getData = this.getData.bind(this);
@@ -39,11 +42,14 @@ class App extends React.Component {
           tenImages.push(data[randomFoodPic].url);
           tenPhotographers.push(data[randomFoodPic].photographer);
           tenFriends.push(data[randomFoodPic].friends);
-          tenReviews.push(data[randomFoodPic].photographer);
+          tenReviews.push(data[randomFoodPic].reviews);
           count++;
         }
         context.setState({
-          images: tenImages
+          images: tenImages,
+          photographers: tenPhotographers,
+          friends: tenFriends,
+          reviews: tenReviews
         })
       },
       error: function(err) {
@@ -74,7 +80,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='slideshow'>
-        <Photos images={this.state.images} nextPhoto={this.nextPhoto} previousPhoto={this.previousPhoto}/>
+        <Photos info={this.state} nextPhoto={this.nextPhoto} previousPhoto={this.previousPhoto}/>
       </div>
     )
   }

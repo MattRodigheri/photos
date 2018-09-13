@@ -32,9 +32,9 @@ body {
   transform: scale(1.2);
 }
 
-/* .right-photo:hover {
+.right-photo:hover {
   transform: scale(1.2);
-} */
+}
 
 .right-photo:hover + .center-photo {
   transform: scale(.5);
