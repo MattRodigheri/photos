@@ -12,6 +12,7 @@ render() {
       <div>
         <ArrowLeft previousPhoto={this.props.previousPhoto}/>
         <img className='photo left-photo' images={this.props.images} src={`${this.props.images[0]}`} />
+        <p>{}</p>
       </div>
     )
   }

@@ -23,17 +23,23 @@ class App extends React.Component {
   getData() {
     var context = this;
     var tenImages = [];
+    var tenPhotographers = [];
+    var tenFriends = [];
+    var tenReviews = [];
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
     }
     $.ajax({
-      url: 'http://localhost:3000/photos',
+      url: '/photos/',
       method: 'GET',
       success: function(data) {
         var count = 0;
         while (count < 10) {
           var randomFoodPic = getRandomInt(0, 49);
-          tenImages.push(data[randomFoodPic].url)
+          tenImages.push(data[randomFoodPic].url);
+          tenPhotographers.push(data[randomFoodPic].photographer);
+          tenFriends.push(data[randomFoodPic].friends);
+          tenReviews.push(data[randomFoodPic].photographer);
           count++;
         }
         context.setState({
