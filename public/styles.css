@@ -1,11 +1,13 @@
 body {
   font-family: Helvetica;
   font-weight: bold;
+  font-size: 12px;
   margin: 50px;
+  /* background-color: #F5F5F5; */
 }
 
 .slideshow {
-  /* height: 250px; */
+  position: relative;
 }
 
 .photo {
@@ -15,43 +17,96 @@ body {
   transition: transform .2s;
 }
 
+.left-caption, .right-caption {
+  position: absolute;
+  padding: 0 7.5px;
+  left: 0px;
+  top: 217px;
+  z-index: 1;
+  background-color: black;
+  transform: scale(1.2);
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .2s;
+  display: none;
+}
+
+.center-caption {
+  position: absolute;
+  padding: 0 7.5px;
+  left: 0px;
+  top: 217px;
+  z-index: 1;
+  background-color: black;
+  transform: scale(1.2);
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .2s;
+}
+
 .center-photo {
-  height: 300px;
-  width: 300px;
+  transform: scale(1.2);
+  box-shadow: -1px -1px 20px 1px #696969;
 }
 
-/* .left-photo {
-
+.photo-container {
+  float: left;
+  transition: transform .2s;
+  position: absolute;
 }
 
-.right-photo {
+.center-photo-container {
+  left: 250px;
+}
 
-} */
+.right-photo-container {
+  left: 500px;
+}
 
 .left-photo:hover {
   transform: scale(1.2);
+  box-shadow: -1px -1px 20px 1px #696969;
 }
 
 .right-photo:hover {
   transform: scale(1.2);
+  box-shadow: -1px -1px 20px 1px #696969;
 }
 
-.right-photo:hover + .center-photo {
-  transform: scale(.5);
+.left-photo-container:hover ~ .center-photo-container {
+  transform: scale(.834);
+  z-index: -1;
+}
+
+.right-photo-container:hover ~ .center-photo-container {
+  transform: scale(.834);
+  z-index: -1;
 }
 
 .arrow {
+  /* will need to change arrow color if background color is not white */
   position: absolute;
   z-index: 1;
-  width: 50px;
+  width: 40px;
+  opacity: 0.8;
 }
 
 .left-arrow {
-  left: 60px;
-  top: 150px;
+  left: -20%;
+  top: 40%;
+  transition: 0.2s;
 }
 
 .right-arrow {
-  left: 730px;
-  top: 150px;
+  left: 100%;
+  top: 40%;
+  transition: 0.2s;
+}
+
+.slideshow:hover .left-arrow {
+  left: 5%;
+}
+
+.slideshow:hover .right-arrow {
+  left: 75%;
 }

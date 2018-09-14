@@ -11,10 +11,10 @@ class Photos extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='slideshow'>
         <PhotoLeft info={this.props.info} previousPhoto={this.props.previousPhoto} />
-        <PhotoCenter info={this.props.info} />
         <PhotoRight info={this.props.info} nextPhoto={this.props.nextPhoto} />
+        <PhotoCenter info={this.props.info} />
       </div>
     )
   }

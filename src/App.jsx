@@ -16,7 +16,7 @@ class App extends React.Component {
     this.getData = this.getData.bind(this);
     this.nextPhoto = this.nextPhoto.bind(this);
     this.previousPhoto = this.previousPhoto.bind(this);
-    // this.timedScroll = window.setInterval(this.nextPhoto, 5000);
+    this.timedScroll = window.setInterval(this.nextPhoto, 8000);
   }
 
   componentDidMount() {
@@ -79,7 +79,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='slideshow'>
+      <div>
         <Photos info={this.state} nextPhoto={this.nextPhoto} previousPhoto={this.previousPhoto}/>
       </div>
     )
