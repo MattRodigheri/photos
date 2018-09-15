@@ -8,7 +8,7 @@ class ModalArrowLeft extends React.Component {
 
   render() {
     return(
-      <img className='arrow modal-left-arrow' src='../left-arrow.png' />
+      <img className='arrow modal-left-arrow' src='../left-arrow.gif' />
     )
   }
 }

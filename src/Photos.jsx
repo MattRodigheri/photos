@@ -34,7 +34,7 @@ class Photos extends React.Component {
     return (
       <div className='slideshow'>
 
-        <Modal show={this.state.show} handleClose={this.hideModal} info={this.props.info} image={this.state.image} previousPhoto={this.previousPhoto}></Modal>
+        <Modal show={this.state.show} handleClose={this.hideModal} info={this.props.info} image={this.state.image} />
 
         <PhotoLeft info={this.props.info} previousPhoto={this.props.previousPhoto} showModal={this.showModal} />
         <PhotoRight info={this.props.info} nextPhoto={this.props.nextPhoto} showModal={this.showModal} />

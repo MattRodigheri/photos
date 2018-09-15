@@ -23,7 +23,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      images: []
+      images: [],
     }
 
     this.getData = this.getData.bind(this);
@@ -43,16 +43,17 @@ class App extends React.Component {
       return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
     }
     $.ajax({
-      url: '/photos',
+      url: '/1',
       method: 'GET',
       success: function(data) {
         for (var i = 0; i < data.length; i++) {
-          if (data[i].rest_id === 1) {
-            foodPics.push(data[i].url);
-          }
+          foodPics.push(data[i].url);
         }
         context.setState({
           images: foodPics,
+          name: data[0].name,
+          location: data[0].location,
+          avatar: data[0].url
         })
       },
       error: function(err) {

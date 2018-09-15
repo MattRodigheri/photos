@@ -17,7 +17,7 @@ class Modal extends React.Component {
         <section className="modal-main">
           <div className='close-button'>
             <p onClick={this.props.handleClose}>Close</p>
-            <img onClick={this.props.handleClose} src='../x.png'/>
+            <img onClick={this.props.handleClose} src='../x.gif'/>
           </div>
 
           <div className='modal-image-container'>
@@ -34,8 +34,8 @@ class Modal extends React.Component {
           <div className='sidebar'>
             <div className='sidebar-main'>
               <div className='photographer-info'>
-                <div className='avatar'></div>
-                <p className='restaurant-name'>Lucky Pig</p>
+                <img className='avatar' src={`${this.props.info.avatar}`}></img>
+                <p className='restaurant-name'>{this.props.info.name}</p>
                 <p className='business-info'>From the business owner</p>
               </div>
               <p className='date'>August 15, 2018</p>

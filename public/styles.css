@@ -249,6 +249,14 @@ body {
   margin: 20px auto;
 }
 
+.avatar {
+  height: 31px;
+  width: 31px;
+  border-radius: 5px;
+  float: left;
+  margin-top: -5px;
+}
+
 .photographer-info {
   line-height: 0.4;
   margin-bottom: 15px;
@@ -257,10 +265,12 @@ body {
 .restaurant-name {
   font-size: 14px;
   color: #0073bb;
+  margin-left: 35px;
 }
 
 .business-info {
   font-weight: normal;
+  margin-left: 35px;
 }
 
 .date {

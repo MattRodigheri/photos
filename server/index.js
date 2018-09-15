@@ -6,12 +6,18 @@ const bodyParser = require('body-parser');
 app.use(express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/photos', function(req, res) {
+app.get('/:rest_id', function(req, res) {
   dbMethods.getPhotos(function(err, data) {
     if(err) {
       res.sendStatus(503);
     } else {
-      res.send(data);
+      var targetInfo = [];
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].rest_id === Number(req.params.rest_id)) {
+          targetInfo.push(data[i])
+        }
+      }
+      res.send(targetInfo);
     }
   })
 })
