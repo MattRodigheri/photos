@@ -5,6 +5,11 @@ class PhotoRight extends React.Component {
   constructor(props) {
     super(props)
 
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.showModal(this.props.info.images[2]);
   }
 
 render() {
@@ -14,7 +19,7 @@ render() {
         <div className='right-caption'>
           <p>Photo of Lucky Pig - San Francisco, CA, United States</p>
         </div>
-        <img className='photo right-photo' info={this.props.info} src={`${this.props.info.images[2]}`} />
+        <img className='photo right-photo' info={this.props.info} src={`${this.props.info.images[2]}`} onClick={this.handleClick} />
       </div>
     )
   }
