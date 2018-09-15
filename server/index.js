@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 app.use(express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/photos/', function(req, res) {
+app.get('/photos', function(req, res) {
   dbMethods.getPhotos(function(err, data) {
     if(err) {
       res.sendStatus(503);
@@ -21,7 +21,7 @@ app.get('/photos/', function(req, res) {
 //     if(err) {
 //       console.log(err)
 //     } else {
-//       console.log(data)
+//       console.log('successful post')
 //     }
 //   })
 // })

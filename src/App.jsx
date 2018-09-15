@@ -38,22 +38,21 @@ class App extends React.Component {
 
   getData() {
     var context = this;
-    var tenImages = [];
+    var foodPics = [];
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
     }
     $.ajax({
-      url: '/photos/',
+      url: '/photos',
       method: 'GET',
       success: function(data) {
-        var count = 0;
-        while (count < 10) {
-          var randomFoodPic = getRandomInt(0, 49);
-          tenImages.push(data[randomFoodPic].url);
-          count++;
+        for (var i = 0; i < data.length; i++) {
+          if (data[i].rest_id === 1) {
+            foodPics.push(data[i].url);
+          }
         }
         context.setState({
-          images: tenImages,
+          images: foodPics,
         })
       },
       error: function(err) {
