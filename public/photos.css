@@ -1,0 +1,80 @@
+.photo {
+  height: 250px;
+  width: 250px;
+  float: left;
+  transition: transform .2s;
+}
+
+.left-caption, .right-caption {
+  position: absolute;
+  padding: 0 7.5px;
+  left: 0px;
+  top: 217px;
+  z-index: 1;
+  background-color: black;
+  transform: scale(1.2);
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .2s;
+  display: none;
+}
+
+.center-caption {
+  position: absolute;
+  padding: 0 7.5px;
+  left: 0px;
+  top: 217px;
+  z-index: 1;
+  background-color: black;
+  transform: scale(1.2);
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .2s;
+}
+
+.center-photo {
+  transform: scale(1.2);
+  box-shadow: -1px -1px 20px 1px #696969;
+}
+
+.photo-container {
+  float: left;
+  transition: transform .2s;
+  position: absolute;
+}
+
+.center-photo-container {
+  left: 250px;
+}
+
+.right-photo-container {
+  left: 500px;
+}
+
+.left-photo:hover {
+  transform: scale(1.2);
+  box-shadow: -1px -1px 20px 1px #696969;
+}
+
+.right-photo:hover {
+  transform: scale(1.2);
+  box-shadow: -1px -1px 20px 1px #696969;
+}
+
+.left-photo-container:hover ~ .center-photo-container {
+  transform: scale(.834);
+  z-index: -1;
+}
+
+.right-photo-container:hover ~ .center-photo-container {
+  transform: scale(.834);
+  z-index: -1;
+}
+
+.slideshow:hover .left-arrow {
+  left: 5%;
+}
+
+.slideshow:hover .right-arrow {
+  left: 75%;
+}

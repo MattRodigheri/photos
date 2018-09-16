@@ -1,4 +1,6 @@
 import React from 'react';
+import arrows from './../public/arrows.css';
+
 
 class ArrowLeft extends React.Component {
   constructor(props) {

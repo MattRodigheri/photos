@@ -3,6 +3,7 @@ import PhotoLeft from './PhotoLeft.jsx';
 import PhotoCenter from './PhotoCenter.jsx';
 import PhotoRight from './PhotoRight.jsx';
 import Modal from './Modal.jsx';
+import photos from './../public/photos.css';
 
 class Photos extends React.Component {
   constructor(props) {

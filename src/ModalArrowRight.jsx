@@ -1,4 +1,5 @@
 import React from 'react';
+import arrows from './../public/arrows.css';
 
 class ModalArrowRight extends React.Component {
   constructor(props) {

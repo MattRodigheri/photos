@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ModalArrowRight from './ModalArrowRight.jsx';
 import ModalArrowLeft from './ModalArrowLeft.jsx';
+import modal from './../public/modal.css';
 
 class Modal extends React.Component {
   constructor(props) {

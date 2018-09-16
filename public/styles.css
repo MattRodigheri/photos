@@ -1,16 +1,15 @@
-body {
+/* body {
   font-family: Helvetica;
   font-weight: bold;
   font-size: 12px;
   margin: 50px;
-  /* background-color: #F5F5F5; */
 }
 
 .slideshow {
   position: relative;
-}
+} */
 
-.photo {
+/* .photo {
   height: 250px;
   width: 250px;
   float: left;
@@ -81,10 +80,9 @@ body {
 .right-photo-container:hover ~ .center-photo-container {
   transform: scale(.834);
   z-index: -1;
-}
+} */
 
-.arrow {
-  /* will need to change arrow color if background color is not white */
+/* .arrow {
   position: absolute;
   z-index: 1;
   width: 40px;
@@ -105,17 +103,17 @@ body {
   left: 100%;
   top: 40%;
   transition: 0.2s;
-}
+} */
 
-.slideshow:hover .left-arrow {
+/* .slideshow:hover .left-arrow {
   left: 5%;
 }
 
 .slideshow:hover .right-arrow {
   left: 75%;
-}
+} */
 
-.modal {
+/* .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -142,9 +140,9 @@ body {
 
 .display-none {
   display: none;
-}
+} */
 
-.modal-left-arrow {
+/* .modal-left-arrow {
   left: 1%;
   top: 45%;
 }
@@ -152,9 +150,9 @@ body {
 .modal-right-arrow {
   left: 71%;
   top: 45%;
-}
+} */
 
-.close-button {
+/* .close-button {
   position: fixed;
   top: -35px;
   right: 25px;
@@ -374,4 +372,4 @@ span {
   border-radius: 3px;
   letter-spacing: -0.5px;
   background-color: #42B338;
-}
+} */
