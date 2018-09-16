@@ -9,7 +9,6 @@ class Modal extends React.Component {
 
   }
 
-
   render() {
     this.showHideClassName = this.props.show ? "modal display-block" : "modal display-none";
     return (

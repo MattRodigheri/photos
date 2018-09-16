@@ -1,11 +1,14 @@
 import React from 'react';
 import App from '../src/App.jsx';
 import Photos from '../src/Photos.jsx';
-import PhotoLeft from '../src/PhotoLeft.jsx'
-import PhotoCenter from '../src/PhotoCenter.jsx'
-import PhotoRight from '../src/PhotoRight.jsx'
+import PhotoLeft from '../src/PhotoLeft.jsx';
+import PhotoCenter from '../src/PhotoCenter.jsx';
+import PhotoRight from '../src/PhotoRight.jsx';
 import ArrowLeft from '../src/ArrowLeft.jsx';
 import ArrowRight from '../src/ArrowRight.jsx';
+import Modal from '../src/Modal.jsx';
+import ModalArrowLeft from '../src/ModalArrowLeft.jsx';
+import ModalArrowRight from '../src/ModalArrowRight.jsx';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
@@ -26,8 +29,6 @@ describe('App', () => {
   })
 });
 
-
-
 describe('Photos', () => {
   it('renders correctly', () => {
     const wrapper = shallow(<Photos />);
@@ -37,21 +38,21 @@ describe('Photos', () => {
 
 describe('PhotoLeft', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<img className='photo left-photo'/>);
+    const wrapper = shallow(<PhotoLeft info={[]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('PhotoCenter', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<img className='photo center-photo'/>);
+    const wrapper = shallow(<PhotoCenter info={[]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('PhotoRight', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<img className='photo right-photo'/>);
+    const wrapper = shallow(<PhotoRight info={[]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -66,6 +67,27 @@ describe('ArrowLeft', () => {
 describe('ArrowRight', () => {
   it('renders correctly', () => {
     const wrapper = shallow(<ArrowRight />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Modal', () => {
+  it('renders correctly', () => {
+    const wrapper = shallow(<Modal />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('ModalArrowLeft', () => {
+  it('renders correctly', () => {
+    const wrapper = shallow(<ModalArrowLeft />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('ModalArrowRight', () => {
+  it('renders correctly', () => {
+    const wrapper = shallow(<ModalArrowRight />);
     expect(wrapper).toMatchSnapshot();
   });
 });

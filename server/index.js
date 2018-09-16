@@ -2,10 +2,14 @@ const express = require('express');
 const app = express();
 const dbMethods = require('../database/index.js');
 const bodyParser = require('body-parser');
+const path = require('path');
 
+
+// app.use('./../public/', express.static(__dirname + './../public/'));
 app.use(express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// app.get('/:rest_id', function(req, res) {
 app.get('/:rest_id', function(req, res) {
   dbMethods.getPhotos(function(err, data) {
     if(err) {
@@ -17,6 +21,7 @@ app.get('/:rest_id', function(req, res) {
           targetInfo.push(data[i])
         }
       }
+      // res.sendFile(path.resolve(__dirname + './../public/'));
       res.send(targetInfo);
     }
   })

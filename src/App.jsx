@@ -44,6 +44,7 @@ class App extends React.Component {
     }
     $.ajax({
       url: '/1',
+      // url: '/',
       method: 'GET',
       success: function(data) {
         for (var i = 0; i < data.length; i++) {
