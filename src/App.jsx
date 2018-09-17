@@ -35,18 +35,17 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getData();
+    this.getData(1);
   }
 
-  getData() {
+  getData(rest_id) {
     var context = this;
     var foodPics = [];
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
     }
     $.ajax({
-      url: '/7',
-      // url: '/',
+      url: `/photos/${rest_id}`,
       method: 'GET',
       success: function(data) {
         for (var i = 0; i < data.length; i++) {

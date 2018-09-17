@@ -5,24 +5,15 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 
-// app.use('./../public/', express.static(__dirname + './../public/'));
 app.use(express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.get('/:rest_id', function(req, res) {
-app.get('/:rest_id', function(req, res) {
-  dbMethods.getPhotos(function(err, data) {
+app.get('/photos/:rest_id', function(req, res) {
+  dbMethods.getPhotos(req.params.rest_id, function(err, data) {
     if(err) {
       res.sendStatus(503);
     } else {
-      var targetInfo = [];
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].rest_id === Number(req.params.rest_id)) {
-          targetInfo.push(data[i])
-        }
-      }
-      // res.sendFile(path.resolve(__dirname + './../public/'));
-      res.send(targetInfo);
+      res.send(data);
     }
   })
 })

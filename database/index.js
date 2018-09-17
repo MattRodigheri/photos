@@ -8,6 +8,16 @@ var connection = mysql.createConnection({
   database : 'photos'
 });
 
+var getPhotos = function(rest_id, callback) {
+  connection.query(`SELECT * FROM photos WHERE rest_id = ${rest_id}`, function (err, rows, fields) {
+    if (err) {
+      callback(err)
+    } else {
+      callback(null, rows)
+    }
+  })
+}
+
 // var data = [
 //     {
 //         "ID": 1,
@@ -210,17 +220,6 @@ var connection = mysql.createConnection({
 //         "url": "https://i.imgur.com/mC748oI.jpg"
 //     }
 // ]
-
-var getPhotos = function(callback) {
-  connection.query('SELECT * FROM photos', function (err, rows, fields) {
-    if (err) {
-      callback(err)
-    } else {
-      callback(null, rows)
-    }
-  })
-}
-
 
 // var insertInfo = function(callback) {
 //   function getRandomInt(min, max) {
