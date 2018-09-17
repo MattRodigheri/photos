@@ -35,12 +35,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getData(1);
+    this.getData();
   }
 
-  getData(rest_id) {
+  getData() {
     var context = this;
     var foodPics = [];
+    const rest_id = window.location.pathname.split('/')[1];
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
     }

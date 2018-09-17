@@ -13,9 +13,11 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 
-
 Enzyme.configure({ adapter: new Adapter() });
 
+var fakeInfo = {
+  images: [0,1,2]
+}
 
 describe('App', () => {
   it('renders correctly', () => {
@@ -31,28 +33,29 @@ describe('App', () => {
 
 describe('Photos', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<Photos />);
+    const wrapper = shallow(<Photos info={fakeInfo}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
+
 describe('PhotoLeft', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<PhotoLeft info={[]} />);
+    const wrapper = shallow(<PhotoLeft info={fakeInfo} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('PhotoCenter', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<PhotoCenter info={[]} />);
+    const wrapper = shallow(<PhotoCenter info={fakeInfo} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('PhotoRight', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<PhotoRight info={[]} />);
+    const wrapper = shallow(<PhotoRight info={fakeInfo} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -73,7 +76,7 @@ describe('ArrowRight', () => {
 
 describe('Modal', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<Modal />);
+    const wrapper = shallow(<Modal info={[]}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

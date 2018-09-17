@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 
-app.use(express.static(__dirname + './../public/'));
+app.use('/:rest_id', express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/photos/:rest_id', function(req, res) {

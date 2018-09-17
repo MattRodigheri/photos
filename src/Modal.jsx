@@ -23,7 +23,7 @@ class Modal extends React.Component {
           <div className='modal-image-container'>
           <ModalArrowLeft />
           <ModalArrowRight />
-            <img className='modal-image' src={`${this.props.image}`} />
+            <img className='modal-image' src={this.props.image} />
             <div className='bottom-bar'>
               <p className='browse'><FontAwesomeIcon icon="th-large" />&nbsp;&nbsp;Browse all</p>
               <p className='image-count'>12 of 298</p>
@@ -34,7 +34,7 @@ class Modal extends React.Component {
           <div className='sidebar'>
             <div className='sidebar-main'>
               <div className='photographer-info'>
-                <img className='avatar' src={`${this.props.info.avatar}`}></img>
+                <img className='avatar' src={this.props.info.avatar}></img>
                 <p className='restaurant-name'>{this.props.info.name}</p>
                 <p className='business-info'>From the business owner</p>
               </div>

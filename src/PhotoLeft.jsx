@@ -15,7 +15,7 @@ class PhotoLeft extends React.Component {
   render() {
     return(
         <div className='photo-container left-photo-container'>
-          <img className='photo left-photo' images={this.props.images} src={`${this.props.info.images[0]}`} onClick={this.handleClick}/>
+          <img className='photo left-photo' images={this.props.images} src={this.props.info.images[0]} onClick={this.handleClick}/>
           <div className='left-caption'>
           <p>{this.props.info.name} - {this.props.info.location}, United States</p>
           </div>
