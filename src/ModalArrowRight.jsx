@@ -15,7 +15,7 @@ class ModalArrowRight extends React.Component {
 
   render() {
     return(
-      <img className='arrow modal-right-arrow' src='../right-arrow.gif' onClick={this.handleClick} />
+      <img className='arrow modal-right-arrow' src='../public/right-arrow.gif' onClick={this.handleClick} />
     )
   }
 }
