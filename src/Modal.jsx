@@ -11,7 +11,7 @@ class Modal extends React.Component {
   }
 
   render() {
-    this.showHideClassName = this.props.show ? "modal display-block" : "modal display-none";
+    this.showHideClassName = this.props.show ? 'modal display-block' : 'modal display-none';
     return (
       <div className={this.showHideClassName}>
         <section className="modal-main">
@@ -21,8 +21,8 @@ class Modal extends React.Component {
           </div>
 
           <div className='modal-image-container'>
-          <ModalArrowLeft />
-          <ModalArrowRight />
+            <ModalArrowLeft />
+            <ModalArrowRight />
             <img className='modal-image' src={this.props.image} />
             <div className='bottom-bar'>
               <p className='browse'><FontAwesomeIcon icon="th-large" />&nbsp;&nbsp;Browse all</p>
@@ -41,7 +41,7 @@ class Modal extends React.Component {
               <p className='date'>August 15, 2018</p>
               <p className='was'>Was this photo ...?</p>
               <button className='helpful'><FontAwesomeIcon icon="arrow-up" />&nbsp;&nbsp;&nbsp;Helpful</button>
-              <button  className='helpful'><FontAwesomeIcon icon="arrow-down" />&nbsp;&nbsp;&nbsp;Not Helpful</button>
+              <button className='helpful'><FontAwesomeIcon icon="arrow-down" />&nbsp;&nbsp;&nbsp;Not Helpful</button>
 
               <div className='delivery-takeout'>
                 <p className='delivery-title'><FontAwesomeIcon icon="truck" />&nbsp;&nbsp;Order Delivery or Takeout</p>

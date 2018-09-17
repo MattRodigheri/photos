@@ -33,7 +33,7 @@ describe('App', () => {
 
 describe('Photos', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<Photos info={fakeInfo}/>);
+    const wrapper = shallow(<Photos info={fakeInfo} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

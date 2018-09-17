@@ -10,13 +10,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/photos/:rest_id', function(req, res) {
   dbMethods.getPhotos(req.params.rest_id, function(err, data) {
-    if(err) {
+    if (err) {
       res.sendStatus(503);
     } else {
       res.send(data);
     }
-  })
-})
+  });
+});
 
 // app.post('/photos', function(req, res) {
 //   dbMethods.insertInfo(function(err, data) {
@@ -28,4 +28,4 @@ app.get('/photos/:rest_id', function(req, res) {
 //   })
 // })
 
-app.listen(3000, () => console.log('listening on port 3000!'))
+app.listen(3000, () => console.log('listening on port 3000!'));

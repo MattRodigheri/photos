@@ -26,7 +26,7 @@ class App extends React.Component {
 
     this.state = {
       images: [],
-    }
+    };
 
     this.getData = this.getData.bind(this);
     this.nextPhoto = this.nextPhoto.bind(this);
@@ -41,12 +41,12 @@ class App extends React.Component {
   getData() {
     var context = this;
     var foodPics = [];
-    const rest_id = window.location.pathname.split('/')[1];
-    function getRandomInt(min, max) {
+    const restId = window.location.pathname.split('/')[1];
+    var getRandomInt = function(min, max) {
       return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
-    }
+    };
     $.ajax({
-      url: `/photos/${rest_id}`,
+      url: `/photos/${restId}`,
       method: 'GET',
       success: function(data) {
         for (var i = 0; i < data.length; i++) {
@@ -57,10 +57,10 @@ class App extends React.Component {
           name: data[0].name,
           location: data[0].location,
           avatar: data[0].url
-        })
+        });
       },
       error: function(err) {
-        console.log(err)
+        console.log(err);
       }
     });
   }
@@ -71,7 +71,7 @@ class App extends React.Component {
     newArr.push(hold);
     this.setState({
       images: newArr
-    })
+    });
   }
 
   previousPhoto() {
@@ -80,7 +80,7 @@ class App extends React.Component {
     newArr.unshift(hold);
     this.setState({
       images: newArr
-    })
+    });
   }
 
 
@@ -89,7 +89,7 @@ class App extends React.Component {
       <div>
         <Photos info={this.state} nextPhoto={this.nextPhoto} previousPhoto={this.previousPhoto}/>
       </div>
-    )
+    );
   }
 }
 

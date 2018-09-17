@@ -2,8 +2,8 @@ import React from 'react';
 import PhotoLeft from './PhotoLeft.jsx';
 import PhotoCenter from './PhotoCenter.jsx';
 import PhotoRight from './PhotoRight.jsx';
-import ArrowLeft from './ArrowLeft.jsx'
-import ArrowRight from './ArrowRight.jsx'
+import ArrowLeft from './ArrowLeft.jsx';
+import ArrowRight from './ArrowRight.jsx';
 import Modal from './Modal.jsx';
 import photos from './../public/photos.css';
 
@@ -25,13 +25,13 @@ class Photos extends React.Component {
       show: true,
       image: image
     });
-  };
+  }
 
   hideModal() {
     this.setState({
       show: false
     });
-  };
+  }
 
   render() {
     return (
@@ -46,7 +46,7 @@ class Photos extends React.Component {
           <p>{this.props.info.name} - {this.props.info.location}, United States</p>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -1,22 +1,21 @@
 var mysql = require('mysql');
 const faker = require('faker');
 
-
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  database : 'photos'
+  host: 'localhost',
+  user: 'root',
+  database: 'photos'
 });
 
-var getPhotos = function(rest_id, callback) {
-  connection.query(`SELECT * FROM photos WHERE rest_id = ${rest_id}`, function (err, rows, fields) {
+var getPhotos = function(restId, callback) {
+  connection.query(`SELECT * FROM photos WHERE rest_id = ${restId}`, function (err, rows, fields) {
     if (err) {
-      callback(err)
+      callback(err);
     } else {
-      callback(null, rows)
+      callback(null, rows);
     }
-  })
-}
+  });
+};
 
 // var data = [
 //     {
