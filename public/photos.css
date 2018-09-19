@@ -1,13 +1,13 @@
 .photo {
-  height: 250px;
-  width: 250px;
+  height: 220px;
+  width: 220px;
   float: left;
   transition: transform .2s;
   object-fit: cover;
 }
 
 .center-photo {
-  transform: scale(1.2);
+  transform: scale(1.15);
   box-shadow: -1px -1px 20px 1px #696969;
 }
 
@@ -18,28 +18,27 @@
 }
 
 .center-photo-container {
-  left: 250px;
+  left: 220px;
 }
 
 .right-photo-container {
-  left: 500px;
+  left: 440px;
 }
 
 .left-photo-container:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   box-shadow: -1px -1px 20px 1px #696969;
   z-index: 1;
 }
 
 .right-photo-container:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   box-shadow: -1px -1px 20px 1px #696969;
   z-index: 1;
 }
 
 .left-photo-container:hover ~ .center-photo-container {
-  transform: scale(.834);
-  /* z-index: -1; */
+  transform: scale(.87);
 }
 
 .left-photo-container:hover ~ .center-caption {
@@ -52,8 +51,7 @@
 }
 
 .right-photo-container:hover ~ .center-photo-container {
-  transform: scale(.834);
-  /* z-index: -1; */
+  transform: scale(.87);
 }
 
 .right-photo-container:hover ~ .center-caption {
@@ -66,9 +64,41 @@
 
 .left-caption, .right-caption {
   position: absolute;
+  font-size: 10px;
+  padding: 10px 6px 10px 6px;
+  line-height: 1.5;
+  left: 0px;
+  top: 170px;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .2s;
+  opacity: 0;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.center-caption {
+  position: absolute;
+  font-size: 10px;
+  padding: 10px 6px 10px 6px;
+  line-height: 1.5;
+  left: 224px;
+  top: 182px;
+  width: 211px;
+  transform: scale(1.2);
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .2s;
+  opacity: 1;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.left-caption, .right-caption {
+  position: absolute;
   padding: 0 7.5px;
   left: 0px;
-  top: 198px;
+  top: 170px;
   color: #FFFFFF;
   background: rgba(0, 0, 0, 0.5);
   transition: .2s;
@@ -78,9 +108,9 @@
 .center-caption {
   position: absolute;
   padding: 0 7.5px;
-  left: 250px;
-  top: 218px;
-  width: 235px;
+  left: 224px;
+  top: 190px;
+  width: 196px;
   transform: scale(1.2);
   color: #FFFFFF;
   background: rgba(0, 0, 0, 0.5);

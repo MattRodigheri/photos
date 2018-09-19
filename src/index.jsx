@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import PhotosApp from './App.jsx';
 import $ from 'jquery';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<PhotosApp />, document.getElementById('photos'));
