@@ -1,6 +1,5 @@
 .arrow {
   position: absolute;
-  /* z-index: 2; */
   z-index: -1;
   width: 40px;
   opacity: 0.7;
@@ -17,16 +16,16 @@
 }
 
 .slideshow:hover .left-arrow {
-  left: 1%;
+  left: 20px;
   z-index: 2;
 }
 
 .right-arrow {
-  right: 70px;
+  left: 720px;
 }
 
 .slideshow:hover .right-arrow {
-  right: 22%;
+  left: 610px;
   z-index: 2;
 }
 

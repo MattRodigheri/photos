@@ -17,7 +17,7 @@ class Modal extends React.Component {
         <section className="modal-main">
           <div className='close-button'>
             <p onClick={this.props.handleClose}>Close</p>
-            <img onClick={this.props.handleClose} src='../public/x.gif'/>
+            <img onClick={this.props.handleClose} src='https://s3-us-west-1.amazonaws.com/indistinctshoutingphotos/x.gif'/>
           </div>
 
           <div className='modal-image-container'>

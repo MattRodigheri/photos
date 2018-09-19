@@ -16,7 +16,7 @@ class ArrowRight extends React.Component {
 
   render() {
     return (
-      <img className='arrow right-arrow' src='../public/right-arrow.gif' onClick={this.handleClick} />
+      <img className='arrow right-arrow' src='https://s3-us-west-1.amazonaws.com/indistinctshoutingphotos/right-arrow.gif' onClick={this.handleClick} />
     );
   }
 }
