@@ -3,30 +3,31 @@ const app = express();
 const dbMethods = require('../database/index.js');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
-
+app.use(cors());
 app.use('/:rest_id', express.static(__dirname + './../public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/photos/:rest_id', function(req, res) {
   dbMethods.getPhotos(req.params.rest_id, function(err, data) {
     if (err) {
-      res.sendStatus(503);
+      res.status(503).send(err);
     } else {
       res.send(data);
     }
   });
 });
 
-// app.post('/photos', function(req, res) {
-//   dbMethods.insertInfo(function(err, data) {
-//     if(err) {
-//       console.log(err)
-//     } else {
-//       console.log('successful post')
-//     }
-//   })
-// })
+app.post('/photos', function(req, res) {
+  dbMethods.insertInfo(function(err, data) {
+    if(err) {
+      console.log(err)
+    } else {
+      console.log('successful post')
+    }
+  })
+})
 
-app.listen(3001, () => console.log('listening on port 3001!'));
-// app.listen(3005, () => console.log('listening on port 3005!'));
+// app.listen(3001, () => console.log('listening on port 3001!'));
+app.listen(3005, () => console.log('listening on port 3005!'));
