@@ -8,10 +8,11 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "react-dev": "webpack -d --watch",
+    "react-dev": "webpack --watch",
     "start": "nodemon server/index.js",
     "test": "jest",
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "post-data": "database/post_data.js"
   },
   "jest": {
     "moduleNameMapper": {
@@ -25,10 +26,11 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "compression": "^1.7.3",
     "cors": "^2.8.4",
     "css-loader": "^1.0.0",
     "express": "^4.16.3",
@@ -36,20 +38,21 @@
     "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.4",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "regenerator-runtime": "^0.12.1",
     "style-loader": "^0.23.0",
-    "webpack": "^4.17.2"
+    "webpack": "^4.19.1"
   },
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.6.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
-    "jest-enzyme": "^6.0.4",
-    "webpack-cli": "^3.1.0"
+    "jest-enzyme": "^6.1.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-merge": "^4.1.4"
   }
 }

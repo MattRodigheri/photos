@@ -31,22 +31,19 @@ class App extends React.Component {
     this.getData = this.getData.bind(this);
     this.nextPhoto = this.nextPhoto.bind(this);
     this.previousPhoto = this.previousPhoto.bind(this);
-    this.timedScroll = window.setInterval(this.nextPhoto, 8000);
   }
 
   componentDidMount() {
     this.getData();
+    window.setInterval(this.nextPhoto, 8000);
   }
 
   getData() {
     var context = this;
     var foodPics = [];
     const restId = window.location.pathname.split('/')[1];
-    var getRandomInt = function(min, max) {
-      return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
-    };
     $.ajax({
-      url: `/photos/${restId}`,
+      url: `/restaurant/${restId}/photos`,
       method: 'GET',
       success: function(data) {
         for (var i = 0; i < data.length; i++) {
