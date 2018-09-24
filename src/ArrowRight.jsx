@@ -2,23 +2,9 @@ import React from 'react';
 import arrows from './../public/arrows.css';
 
 
-class ArrowRight extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.props.nextPhoto();
-  }
-
-
-  render() {
-    return (
-      <img className='arrow right-arrow' src='https://s3-us-west-1.amazonaws.com/indistinctshoutingphotos/right-arrow.gif' onClick={this.handleClick} />
-    );
-  }
+const ArrowRight = (props) => {
+  return <img className='arrow right-arrow' src='https://s3-us-west-1.amazonaws.com/indistinctshoutingphotos/right-arrow.gif' onClick={props.nextPhoto} />
 }
+
 
 export default ArrowRight;
