@@ -12,7 +12,6 @@
     "start": "nodemon server/index.js",
     "test": "jest",
     "eslint": "eslint",
-    "post-data": "database/post_data.js"
   },
   "jest": {
     "moduleNameMapper": {

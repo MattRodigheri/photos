@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 var getPhotos = function(restId, callback) {
   connection.query(`SELECT * FROM photos WHERE rest_id = ${restId}`, function (err, rows, fields) {
     if (err) {
-      callback(err);
+      callback(err, null);
     } else {
       callback(null, rows);
     }
